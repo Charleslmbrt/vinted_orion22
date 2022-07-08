@@ -67,7 +67,7 @@ router.post(
       //J'envoie mon image sur cloudinary, juste après avoir crée en DB mon offre
       // Comme ça j'ai accès à mon ID
       const result = await cloudinary.uploader.upload(
-        convertToBase64(req.files.picture),
+        convertToBase64(req.files.product_image),
         {
           folder: "vinted/offers",
           public_id: `${req.body.title} - ${newOffer._id}`,

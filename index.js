@@ -20,6 +20,6 @@ app.all("*", (req, res) => {
   res.status(400).json("Route introuvable");
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server has started ! 🤙");
 });
